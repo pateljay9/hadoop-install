@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive VirtualBox Installation Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A two-column layout will be used. The left column features a fixed, interactive step-by-step navigation list. The right column dynamically displays the content (image and description) for the selected step. This structure was chosen because it breaks down the linear installation process into clear, manageable chunks, providing a focused view for each stage. The user can easily track their progress and jump between steps, which is more intuitive and user-friendly than scrolling a long document. -->
+    <!-- Visualization & Content Choices: The core of this guide is the installation procedure. Goal: Inform/Organize. Method: A clickable step-by-step list (HTML/JS) serves as the primary navigation. Interaction: Clicking a step updates the main content area. Justification: This transforms a static document into an interactive guide, enhancing user engagement and clarity. The main visuals (screenshots) are presented clearly alongside their descriptions. No complex charts are needed; the interactive flow itself is the key visualization. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-item.active {
+            background-color: #4338ca; /* Indigo-700 */
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .nav-item {
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        .content-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Oracle VM VirtualBox 5.1.14</h1>
+            <p class="text-md text-gray-600 mt-2">An Interactive Installation Guide</p>
+        </header>
+
+        <div class="flex flex-col md:flex-row bg-white rounded-2xl shadow-xl overflow-hidden min-h-[70vh]">
+            
+            <!-- Left Side Navigation -->
+            <aside id="navigation" class="w-full md:w-1/3 lg:w-1/4 bg-gray-100 p-4 md:p-6 border-r border-gray-200">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">Installation Steps</h2>
+                <nav id="step-navigation" class="space-y-2">
+                    <!-- Navigation items will be injected by JavaScript -->
+                </nav>
+            </aside>
+
+            <!-- Right Side Content -->
+            <main id="content" class="w-full md:w-2/3 lg:w-3/4 p-6 md:p-10">
+                <div id="content-display" class="content-fade-in">
+                    <!-- Content will be injected by JavaScript -->
+                </div>
+            </main>
+        </div>
+
+        <footer class="text-center mt-8 text-sm text-gray-500">
+            <p>Designed to simplify the VirtualBox installation process.</p>
+            <p id="copyright-info" class="text-sm text-gray-400"></p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const steps = [
+                {
+                    id: 'welcome',
+                    title: 'Welcome Screen',
+                    description: "Upon launching the installer, you will be greeted by the Welcome Setup Wizard. Click 'Next' to proceed with the installation.",
+                    imageUrl: './assets/virtualmachine (1).PNG'
+                },
+                {
+                    id: 'custom-setup',
+                    title: 'Custom Setup',
+                    description: "In the Custom Setup screen, you can select the features you wish to install. By default, all primary features are selected. You can also change the installation location here. After configuring, click 'Next'.",
+                    imageUrl: './assets/virtualmachine (2).PNG'
+                },
+                {
+                    id: 'options',
+                    title: 'Installation Options',
+                    description: "This screen allows you to choose additional installation options such as creating start menu entries, desktop shortcuts, and registering file associations. Select your preferred options and click 'Next'.",
+                    imageUrl: './assets/virtualmachine (3).PNG'
+                },
+                {
+                    id: 'warning',
+                    title: 'Network Warning',
+                    description: "You may encounter a warning regarding Network Interfaces. Installing the networking feature will temporarily disconnect you from the network. This is normal. Click 'Yes' to proceed.",
+                    imageUrl: './assets/virtualmachine (4).PNG'
+                },
+                {
+                    id: 'ready',
+                    title: 'Ready to Install',
+                    description: "The setup wizard is now ready to begin the custom installation. Review your settings. If everything is correct, click 'Install' to begin the process. You can click 'Back' to change settings.",
+                    imageUrl: './assets/virtualmachine (5).PNG'
+                },
+                {
+                    id: 'progress',
+                    title: 'Installation Progress',
+                    description: "The installer will now copy the necessary files to your system. This process may take several minutes. Please wait for it to complete.",
+                    imageUrl: './assets/virtualmachine (6).PNG'
+                },
+                {
+                    id: 'complete',
+                    title: 'Installation Complete',
+                    description: "Once the installation is complete, you will see a confirmation screen. You can choose to start Oracle VM VirtualBox immediately. Click 'Finish' to exit the setup wizard.",
+                    imageUrl: './assets/virtualmachine (7).PNG'
+                },
+                {
+                    id: 'manager',
+                    title: 'VirtualBox Manager',
+                    description: "After the installation, the Oracle VM VirtualBox Manager will launch. From here, you can create and manage all your virtual machines. The list is empty now, but you're all set to create your first VM!",
+                    imageUrl: './assets/virtualmachine (8).PNG'
+                }
+            ];
+
+            const navigationContainer = document.getElementById('step-navigation');
+            const contentDisplay = document.getElementById('content-display');
+            const copyrightInfo = document.getElementById('copyright-info');
+            let currentStepId = steps[0].id;
+
+            function renderNavigation() {
+                navigationContainer.innerHTML = steps.map((step, index) => `
+                    <button data-step="${step.id}" class="nav-item w-full text-left px-4 py-2.5 rounded-lg text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <span class="font-medium">${index + 1}. ${step.title}</span>
+                    </button>
+                `).join('');
+            }
+
+            function renderContent(stepId) {
+                const step = steps.find(s => s.id === stepId);
+                if (!step) return;
+
+                contentDisplay.innerHTML = `
+                    <div class="content-fade-in">
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">${step.title}</h2>
+                        <p class="text-base text-gray-600 mb-6 leading-relaxed">${step.description}</p>
+                        <div class="bg-gray-100 p-2 rounded-lg border border-gray-200 shadow-inner">
+                             <img src="${step.imageUrl}" alt="${step.title}" class="w-full rounded-md object-contain max-h-[45vh]" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e2e8f0/4a5568?text=Image+Not+Found';">
+                        </div>
+                    </div>
+                `;
+                currentStepId = stepId;
+                updateActiveNav();
+            }
+
+            function updateActiveNav() {
+                const navItems = navigationContainer.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    if (item.dataset.step === currentStepId) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+
+            function updateCopyright() {
+                const currentYear = new Date().getFullYear();
+                const personalInfo = { name: "Jay Patel" };
+                copyrightInfo.textContent = `© ${currentYear} ${personalInfo.name}. All rights reserved.`;
+            }
+
+            navigationContainer.addEventListener('click', function(e) {
+                const button = e.target.closest('.nav-item');
+                if (button && button.dataset.step) {
+                    renderContent(button.dataset.step);
+                }
+            });
+
+            renderNavigation();
+            renderContent(currentStepId);
+            updateCopyright();
+        });
+    </script>
+</body>
+</html>
