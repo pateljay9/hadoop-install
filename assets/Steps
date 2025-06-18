@@ -1,0 +1,39 @@
+If you want to run a program written in Java, for that you have to install JRE (Java Runtime Environment). If you want to begin developing Java programs, then you also need to install JDK (Java Development Kit). Following tutorial is showing you how to install Oracle Java 8 on Ubuntu 16.10 via PPA.
+
+Prerequisites:
+Oracle VirtualBox
+Ubuntu 16.10
+
+Installing the Default JRE/JDK:
+
+First, open Terminal (ctrl+alt+T) and Update the existing package by following command.
+$ sudo apt-get update
+
+Next, Install Java. Following command will install JRE(JAVA RUNTIME ENVIRONMENT)
+$ sudo apt-get install default-jre
+
+JDK contains the JRE, so there is no issue if you install JDK on place of JRE. Following command will install JDK.	
+$ sudo apt-get install default-jdk
+
+Installing Oracle Java 8 on Ubuntu 16.10 via PPA:
+
+First, open Terminal (ctrl+alt+T) and execute following command. It will add PPA repository of JAVA into Ubuntu.
+$ sudo add-apt-repository ppa:webupd8team/java
+
+Next,update the existing package by following command.
+$ sudo apt-get update
+
+And at last install JAVA by following command.
+$ sudo apt-get install openjdk-8-jdk
+
+Once the installation is finished, you can check Java version with the following command:
+$ java -version
+
+And check Java compiler,
+$ javac -version
+
+Now if you want to see the value of of variable using echo command.
+$ echo $JAVA_HOME
+
+
+
