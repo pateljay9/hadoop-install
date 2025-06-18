@@ -32,9 +32,9 @@ Before we begin, ensure you have the following essential components:
     * **Version:** Choose the specific version of Ubuntu you downloaded (e.g., "Ubuntu (64-bit)"). VirtualBox will often auto-detect this based on the name you entered, but it's good to confirm.
 4.  **Click "Next":** Once these details are filled, click "Next" to proceed.
 
-![Step1.1](./assets/UbantuInstall01.png) 
---- 
-![Step1.2](./assets/UbantuInstall1.bmp)
+<img src="./assets/UbantuInstall01.png" alt="Create a New Virtual Machine"  width="500"> <img src="./assets/UbantuInstall1.bmp" alt="Basic Settings"  width="300" height="340">
+
+---
 
 ### Step 2: Set Virtual Machine Memory (RAM)
 
@@ -45,14 +45,23 @@ Before we begin, ensure you have the following essential components:
     * **Important:** Do not allocate more than half of your host machine's total RAM to the virtual machine, as your host operating system also needs RAM to function properly. VirtualBox will show a green zone on the slider, indicating a safe range.
 3.  **Click "Next":** Confirm your memory allocation and click "Next."
 
-![Step2](./assets/UbantuInstall2.bmp)
+<img src="./assets/UbantuInstall2.bmp" alt="Set Virtual Machine Memory (RAM)" >  
+<!-- width="300"> -->
+<!-- ![Step2](./assets/UbantuInstall2.bmp) -->
+
+---
+
 ### Step 3: Assign Hard Disk Drive (HDD) Space
 
 1.  **Virtual Hard Disk Creation:** You'll be asked about adding a hard disk. For a new installation, it's highly recommended to select the radio button: **"Create a virtual hard disk now."**
     * This option will guide you through creating a brand-new virtual hard disk file that your Ubuntu installation will use.
 2.  **Click "Create":** Click "Create" to move to the next step.
 
-![Step3](./assets/UbantuInstall3.bmp)
+<img src="./assets/UbantuInstall3.bmp" alt="Assign Hard Disk Drive (HDD) Space" >
+ <!-- width="500"> -->
+<!-- ![Step3](./assets/UbantuInstall3.bmp) -->
+
+---
 
 ### Step 4: Choose Virtual Hard Disk Type
 
@@ -60,7 +69,10 @@ Before we begin, ensure you have the following essential components:
     * **Why VDI?** This is VirtualBox's native format, designed for optimal compatibility and performance within VirtualBox. While VirtualBox can also work with VMDK (VMware) or VHD (Microsoft Hyper-V) formats, VDI is the best choice when creating a new VM in VirtualBox.
 2.  **Click "Next":** Choose VDI and click "Next."
 
-![Step4](./assets/UbantuInstall4.bmp)
+<img src="./assets/UbantuInstall4.bmp" alt="Choose Virtual Hard Disk Type" width="350">
+<!-- ![Step4](./assets/UbantuInstall4.bmp) -->
+
+---
 
 ### Step 5: Choose Storage Allocation
 
@@ -73,7 +85,10 @@ Before we begin, ensure you have the following essential components:
 3.  **Recommendation:** For most beginners and general use, **"Dynamically allocated"** is the preferred choice due to its flexibility and initial space saving.
 4.  **Click "Next":** Make your selection and click "Next."
 
-![Step5](./assets/UbantuInstall5.bmp)
+<img src="./assets/UbantuInstall5.bmp" alt="Choose Storage Allocation"  width="350">
+<!-- ![Step5](./assets/UbantuInstall5.bmp) -->
+
+---
 
 ### Step 6: Name and Size Virtual Hard Disk
 
@@ -95,15 +110,30 @@ Before we begin, ensure you have the following essential components:
         7.  Click "OK" to close the settings and then "Start" your VM.
     * Your virtual machine will now boot up from the Ubuntu installation media, just like a physical computer booting from a DVD or USB drive.
 
-![Step6.1](./assets/UbantuInstall6.bmp)
+<img src="./assets/UbantuInstall6.bmp" alt="Setting"  width="500">
+<!-- ![Step6.1](./assets/UbantuInstall6.bmp) -->
+
 ---
-![Step6.2](./assets/UbantuInstall7.bmp)
+
+<img src="./assets/UbantuInstall7.bmp" alt="Storage"  width="500">
+<!-- ![Step6.2](./assets/UbantuInstall7.bmp) -->
+
 ---
-![Step6.3](./assets/UbantuInstall8.bmp)
+
+<img src="./assets/UbantuInstall8.bmp" alt="Attributes"  width="500">
+<!-- ![Step6.3](./assets/UbantuInstall8.bmp) -->
+
 ---
-![Step6.4](./assets/UbantuInstall9.bmp)
+
+<img src="./assets/UbantuInstall9.bmp" alt="Choose Virtual File"  width="500">
+<!-- ![Step6.4](./assets/UbantuInstall9.bmp) -->
+
 ---
-![Step6.5](./assets/UbantuInstall10.bmp)
+<img src="./assets/UbantuInstall10.bmp" alt="List Attached File"  width="500">
+<!-- ![Step6.5](./assets/UbantuInstall10.bmp) -->
+
+---
+
 
 ### Step 7: Start Virtual Machine
 
@@ -114,7 +144,11 @@ Before we begin, ensure you have the following essential components:
 5.  **Select Language:** On the left sidebar, choose your preferred language for the installation process and the installed operating system (e.g., "English").
 6.  **Choose "Install Ubuntu":** Click on the **"Install Ubuntu"** button to begin the installation procedure. (The "Try Ubuntu" option lets you test Ubuntu without installing it, but we're going for a full install here.)
 
-![Step7](./assets/UbantuInstall11.bmp)
+<img src="./assets/UbantuInstall25.png" alt="Start Virtual Machine"  width="658">
+<img src="./assets/UbantuInstall11.bmp" alt="Welcome Screen"  width="500">
+<!-- ![Step7](./assets/UbantuInstall11.bmp) -->
+
+---
 
 ### Step 8: Installation Options
 
@@ -129,7 +163,10 @@ This screen provides important choices for how Ubuntu is installed:
     * **Check this box (Highly Recommended):** This is crucial for a smooth experience! It installs proprietary drivers (software that isn't open-source but is often necessary) for components like graphics cards (e.g., NVIDIA), Wi-Fi adapters (e.g., Broadcom), and multimedia codecs (for playing MP3s, videos, etc.). Checking this will help ensure your virtual machine's display and audio work correctly.
 4.  **Click "Continue":** Make your selections and click "Continue."
   
-![Step8](./assets/UbantuInstall12.bmp)
+<img src="./assets/UbantuInstall12.bmp" alt="Installation Options"  width="500">
+<!-- ![Step8](./assets/UbantuInstall12.bmp) -->
+
+---
 
 ### Step 9: Disk Installation Type
 
@@ -141,14 +178,20 @@ This is a critical step for how Ubuntu will use the virtual hard disk you create
 2.  **Other options (e.g., "Something else"):** These are for more advanced users who want to manually create or manage partitions on the disk. For a beginner installing into a VM, "Erase disk and install Ubuntu" is the way to go.
 3.  **Click "Install Now":** After selecting "Erase disk and install Ubuntu," click "Install Now."
 
-![Step9](./assets/UbantuInstall13.bmp)
+<img src="./assets/UbantuInstall13.bmp" alt="Disk Installation Type"  width="500">
+<!-- ![Step9](./assets/UbantuInstall13.bmp) -->
+
+---
 
 ### Step 10: Modify Disk (Confirmation)
 
 1.  **Review Changes:** A dialogue box will pop up, summarizing the changes that will be made to the virtual disk (e.g., creating partitions like `/` and `swap`).
 2.  **Confirm:** This is your last chance to review before the changes are written to the virtual disk. If everything looks correct, click "Continue" to confirm.
 
-![Step10](./assets/UbantuInstall14.bmp)
+<img src="./assets/UbantuInstall14.bmp" alt="Modify Disk (Confirmation)"  width="500">
+<!-- ![Step10](./assets/UbantuInstall14.bmp) -->
+
+---
 
 ### Step 11: Select Location
 
@@ -156,7 +199,10 @@ This is a critical step for how Ubuntu will use the virtual hard disk you create
 2.  **Automatic Detection:** Ubuntu usually tries to detect your location automatically based on your network settings, but you can manually adjust it if needed.
 3.  **Click "Continue":** Confirm your location and click "Continue."
 
-![Step11](./assets/UbantuInstall15.bmp)
+<img src="./assets/UbantuInstall15.bmp" alt="Select Location"  width="500">
+<!-- ![Step11](./assets/UbantuInstall15.bmp) -->
+
+---
 
 ### Step 12: Select Keyboard Type
 
@@ -164,7 +210,10 @@ This is a critical step for how Ubuntu will use the virtual hard disk you create
 2.  **Test Your Keyboard:** You might see a text box where you can type to test if your chosen layout works as expected. This helps ensure that keys like "@" or "#" produce the correct symbols.
 3.  **Click "Continue":** After selecting and verifying your keyboard layout, click "Continue."
 
-![Step12](./assets/UbantuInstall16.bmp)
+<img src="./assets/UbantuInstall16.bmp" alt="Select Keyboard Type"  width="500">
+<!-- ![Step12](./assets/UbantuInstall16.bmp) -->
+
+---
 
 ### Step 13: Enter User Details
 
@@ -179,20 +228,26 @@ This step is about creating your primary user account for the new Ubuntu system.
     * **"Log in automatically":** The system will boot directly to your desktop without asking for a password. Convenient but less secure.
 6.  **Click "Continue":** Once all fields are filled, click "Continue."
 
-![Step13](./assets/UbantuInstall17.bmp)
+<img src="./assets/UbantuInstall17.bmp" alt="Enter User Details"  width="500">
+<!-- ![Step13](./assets/UbantuInstall17.bmp) -->
+
+---
 
 ### Step 14: Copying Files
 
 1.  **Installation in Progress:** At this stage, the installer begins copying the necessary Ubuntu operating system files from the .iso image to the virtual hard disk you created. You'll see a progress bar.
 2.  **Patience is Key:** This step can take some time, depending on your computer's speed and the amount of data to be copied.
 
-![Step14](./assets/UbantuInstall18.bmp)
+<!-- ![Step14](./assets/UbantuInstall18.bmp) -->
+<img src="./assets/UbantuInstall18.bmp" alt="Copying Files"  width="500">
 
 ### Step 15: Retrieving Files
 
 1.  **Preparing Components:** This phase continues the installation process, retrieving and preparing various system components and software packages required for Ubuntu to function correctly. It's part of the core setup.
 
-![Step15](./assets/UbantuInstall19.bmp)
+<img src="./assets/UbantuInstall19.bmp" alt="Retrieving Files"  width="500">
+
+---
 
 ### Step 16: Downloading Packages
 
@@ -200,7 +255,9 @@ This step is about creating your primary user account for the new Ubuntu system.
 2.  **Internet Connection:** An active internet connection is crucial for this step. The installer fetches the latest system updates, security patches, and any additional drivers or media codecs you opted for from Ubuntu's repositories.
 3.  **Progress:** This step can also take a while, depending on your internet speed and the number of updates available.
 
-![Step16](./assets/UbantuInstall20.bmp)
+<img src="./assets/UbantuInstall20.bmp" alt="Downloading Packages"  width="500">
+
+---
 
 ### Step 17: Installation Completed and Restart
 
@@ -208,14 +265,18 @@ This step is about creating your primary user account for the new Ubuntu system.
 2.  **Restart Prompt:** The installer will prompt you to restart your VirtualBox machine.
 3.  **Click "Restart Now":** Click the "Restart Now" button to reboot your virtual machine. This is essential for Ubuntu to boot into its newly installed environment.
 
-![Step17](./assets/UbantuInstall21.bmp)
+<img src="./assets/UbantuInstall21.bmp" alt="Installation Completed and Restart"  width="500">
+
+---
 
 ### Step 18: Remove Installation Medium
 
 1.  **Ejecting the Virtual CD:** After the restart, you might see a black screen with a message like "Please remove the installation medium, then press ENTER."
 2.  **Press Enter:** Simply press the `Enter` key on your keyboard. This simulates ejecting the virtual Ubuntu .iso disc from your virtual machine's optical drive, ensuring that the VM boots from the installed operating system on its virtual hard disk, not the installer again.
 
-![Step18](./assets/UbantuInstall22.bmp)
+<img src="./assets/UbantuInstall22.bmp" alt="Remove Installation Medium"  width="500">
+
+---
 
 ### Step 19: Login to Ubuntu
 
@@ -223,14 +284,16 @@ This step is about creating your primary user account for the new Ubuntu system.
 2.  **Enter Password:** Click on your username and then type the password you created in Step 14.
 3.  **Press Enter or Click "Sign In":** Once you've entered your password, press `Enter` or click the "Sign In" button.
 
-![Step19](./assets/UbantuInstall23.bmp)
+<img src="./assets/UbantuInstall23.bmp" alt="Login to Ubuntu"  width="500">
+
+---
 
 ### Step 20: Successfully Installed Ubuntu
 
 1.  **Desktop Environment:** Congratulations! You have now successfully installed Ubuntu on your Virtual Machine. You will see the Ubuntu desktop environment, ready for you to explore and use.
 2.  **Next Steps:** You might want to consider installing VirtualBox Guest Additions now if you haven't already, for the best performance and integration with your host system.
 
-![Step20](./assets/UbantuInstall24.JPG)
+<img src="./assets/UbantuInstall24.jpg" alt="Successfully Installed Ubuntu" width="500">
 
 ---
 
