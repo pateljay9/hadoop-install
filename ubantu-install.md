@@ -293,7 +293,7 @@ This step is about creating your primary user account for the new Ubuntu system.
 1.  **Desktop Environment:** Congratulations! You have now successfully installed Ubuntu on your Virtual Machine. You will see the Ubuntu desktop environment, ready for you to explore and use.
 2.  **Next Steps:** You might want to consider installing VirtualBox Guest Additions now if you haven't already, for the best performance and integration with your host system.
 
-<img src="./assets/UbantuInstall24.jpg" alt="Successfully Installed Ubuntu" width="500">
+<img src="./assets/UbantuInstall24.JPG" alt="Successfully Installed Ubuntu" width="500">
 
 ---
 
